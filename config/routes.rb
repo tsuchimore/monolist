@@ -12,7 +12,11 @@ Rails.application.routes.draw do
   resources :relationships, only: [:create, :destroy]
   resources :ownerships, only: [:create, :destroy]
   resources :items , only: [:new , :show]
-
+  resources :microposts do
+    member do
+      get :retweet # リツイート元の id が params[:id] に入るので、それでリツイート元の投稿を取得して、新しい投稿作成します。
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
