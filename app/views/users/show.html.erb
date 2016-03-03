@@ -2,3 +2,12 @@
 
 
 <%= render 'items/list' , items: @items %>
+
+
+<% content_for :description do %>
+  [アイテム名]に関する情報です。この商品を欲しい人、持ってる人を表示しています。
+<% end %>
+
+<% content_for :title do %>
+  [タイトル名]に関する情報です。この商品を欲しい人、持ってる人を表示しています。
+<% end %>
