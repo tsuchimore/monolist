@@ -4,10 +4,10 @@
 <%= render 'items/list' , items: @items %>
 
 
-<% content_for :description do %>
-  [アイテム名]に関する情報です。この商品を欲しい人、持ってる人を表示しています。
+<% content_for :title do %>
+<%= @user.name %> 
 <% end %>
 
-<% content_for :title do %>
-  [タイトル名]に関する情報です。この商品を欲しい人、持ってる人を表示しています。
+<% content_for :description do %>
+<%= @user.name %>に関する情報です。<%= @user.name %>の欲しいモノ、持ってるモノを表示しています。
 <% end %>
